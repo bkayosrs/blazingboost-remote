@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #1b1d23;
+  color: #e6e8ee;
+  font: 13px system-ui, "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+/* Müşteri göstergeyi istediği yere sürükleyebilsin. */
+.bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 6px 0 12px;
+  border: 1px solid #e5484d;
+  -webkit-app-region: drag;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e5484d;
+  animation: pulse 1.4s infinite;
+}
+
+.label { flex: 1; font-weight: 600; }
+
+button {
+  -webkit-app-region: no-drag;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #e5484d;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  50% { opacity: 0.3; }
+}

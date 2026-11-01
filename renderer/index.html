@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src ws: wss:; style-src 'self'; img-src 'self'">
+  <title>Blazingboost Remote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="brand">
+    <img src="logo.png" alt="" width="40" height="40">
+    <h1>Blazingboost Remote</h1>
+  </header>
+  <p class="lead">
+    This application lets Blazingboost boosters connect to your computer and play OSRS for you.
+    Give the code and PIN below to your booster. They can <b>only</b> see and control the
+    Jagex Launcher / RuneLite / OSRS window. Your desktop, files and other programs stay hidden.
+  </p>
+
+  <div class="creds">
+    <div class="card">
+      <label>Connection code</label>
+      <div id="code" class="big"></div>
+    </div>
+    <div class="card">
+      <label>PIN</label>
+      <div id="pin" class="big"></div>
+      <button id="newPin" class="link">New PIN</button>
+    </div>
+  </div>
+
+  <div id="session" class="session">
+    <span id="sessionText">No booster connected</span>
+    <button id="kick" class="danger" hidden>Disconnect (F8)</button>
+  </div>
+
+  <ul class="status">
+    <li>Server: <b id="serverStatus">connecting…</b></li>
+    <li>Booster: <b id="linkStatus">—</b></li>
+  </ul>
+
+  <label class="toggle"><input type="checkbox" id="allow"> Allow booster to connect automatically</label>
+  <label class="toggle"><input type="checkbox" id="autostart"> Start with Windows</label>
+
+  <p class="note">
+    While the boost is running, keep your PC on and don't use the mouse or keyboard; you share the
+    same cursor with the booster. You can end the session at any time by pressing <b>F8</b> or clicking "Disconnect".
+  </p>
+
+  <script src="app.js"></script>
+</body>
+</html>

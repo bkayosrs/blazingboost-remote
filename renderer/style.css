@@ -1,0 +1,78 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --line: #262b36;
+  --text: #e6e8ee;
+  --muted: #8a92a6;
+  --accent: #ffb02e;
+  --danger: #e5484d;
+  --ok: #30a46c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+h1 { margin: 0; font-size: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.lead, .note { color: var(--muted); margin: 0 0 16px; font-size: 13px; }
+.lead b { color: var(--text); }
+
+.creds { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px; margin-bottom: 14px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.card label { color: var(--muted); font-size: 12px; }
+
+.big {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  user-select: text;
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.session.active { border-color: var(--danger); background: #2a1517; }
+
+.status { list-style: none; padding: 0; margin: 0 0 12px; color: var(--muted); }
+.status b { color: var(--text); font-weight: 500; }
+
+.toggle { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+
+button, input {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+button { cursor: pointer; background: var(--accent); border-color: var(--accent); color: #1a1205; font-weight: 600; }
+button.danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+button.link { background: none; border: none; padding: 0; color: var(--accent); font-size: 12px; font-weight: 500; }
